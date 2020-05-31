@@ -1,0 +1,36 @@
+a {
+	color: #ff6600;
+	word-break: break-word;
+}
+
+a:hover {
+	color: #ff6600;
+	text-decoration: underline;
+}
+
+.a-black,
+.a-black:hover {
+	color: #4a4a4a;
+	text-decoration: none;
+	word-break: break-word;
+}
+
+progress.progress {
+	background-image: linear-gradient(to right, #ff6600 30%, #ededed 30%) !important;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.dark {
+	background: #222;
+}
+
+.dark, .dark body, .dark .title, .dark .tabs a, .dark .a-black {
+	color: #eee;
+}
+
+.dark .theme {
+	background: #fff !important;
+}
