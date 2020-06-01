@@ -37,7 +37,7 @@
 </style>
 
 <div class="columns is-mobile is-centered is-marginless">
-  <div class="column is-half-tablet">
+  <div class="column is-half-tablet is-full-mobile">
     {#if !error}
       {#await $data}
         <progress class="progress is-small" max="100">50%</progress>

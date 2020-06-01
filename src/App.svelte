@@ -59,7 +59,7 @@
         title="theme switcher"
         on:click={switchTheme} />
     </div>
-    <div class="tabs is-medium is-centered is-fullwidth-mobile">
+    <div class="tabs is-medium is-centered">
       <ul>
         <li class:is-active={$current === 'news'}>
           <a href="/" use:link>top</a>
