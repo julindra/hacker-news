@@ -9,6 +9,16 @@
   const data = axios.get(`${$base}/item/${id}`);
 </script>
 
+<style>
+  .content :global(*) {
+    word-break: break-word;
+  }
+
+  .content :global(pre) {
+    overflow-x: auto;
+  }
+</style>
+
 <div class="columns is-mobile is-centered is-marginless">
   <div class="column is-half-tablet is-full-mobile">
     {#await data}
@@ -29,6 +39,12 @@
         <a href="/user/{res.data.user}" use:link>{res.data.user}</a>
         {res.data.time_ago}
       </small>
+
+      {#if res.data.content}
+        <div class="content" style="margin-top: 1rem;">
+          {@html res.data.content}
+        </div>
+      {/if}
 
       <hr />
 
