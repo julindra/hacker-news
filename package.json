@@ -1,6 +1,8 @@
 {
-  "name": "svelte-app",
+  "name": "hacker-news",
   "version": "1.0.0",
+  "author": "Renhard Julindra",
+  "description": "hacker news built with svelte",
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
