@@ -42,9 +42,13 @@
       {#await $data}
         <progress class="progress is-small" max="100">50%</progress>
       {:then res}
-        {#each res.data as d, i}
-          <List no={(page - 1) * 30 + i + 1} detail={d} />
-        {/each}
+        {#if res.data.length <= 0}
+          <p>no more data to display</p>
+        {:else}
+          {#each res.data as d, i}
+            <List no={(page - 1) * 30 + i + 1} detail={d} />
+          {/each}
+        {/if}
       {:catch err}
         <p>something went wrong: {err.message}</p>
       {/await}
